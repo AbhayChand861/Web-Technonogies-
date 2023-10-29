@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Object Properties</title>
+<script src="new.js"></script>
+</head>
+<body>
+<form>
+<h1 class="h">Web Forms</h1>
+<lable> Name </label>
+<input type="text" id="name">
+<br>
+<br>
+<fieldset>
+<legend>
+<label>Gender</label></legend>
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male">
+<br>
+<label for="female"></label>
+Female <input type="radio" name="gender" id="female">
+</fieldset>
+<br>
+<br>
+<label for="email">Email</label>
+<input type="email" placeholder="abc@gmail.com" id="email">
+<br><br>
+<label for="dob">DOB</label>
+<input type="date" id="dob" name="dob"> 
+</form>
+<br>
+<p>hello</p>
+<p>everyone</p>
+<p>how are you</p>
+<button type="button" onclick="showname()">Your Name</button><br>
+<button onclick="countp()">count paragraphs</button><br>
+<button onclick="showdob()">DOB</button><br>
+<button onclick="createlement()">Create Element</button>
+</body>
+</html>
+JS CODE:-
+function showname(){
+ var n=document.getElementById("name").value;
+ prompt("your name is",n);
+}
+function showdob(){
+ var d=document.getElementByName("dob").value;
+ prompt("your DOB is",d);
+}
+
+java script -
+
+function countp(){
+ var x=document.getElementsByTagName("p");
+ alert("total paragraphs : "+x.length);
+}
+function createlement(){
+ const para = document.createElement("p");
+ para.innerText = "This is a paragraph.";
+ document.body.appendChild(para);
+}
